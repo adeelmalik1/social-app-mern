@@ -5,7 +5,6 @@ const {sendEmail} = require('../middleware/sendEmail');
 exports.register = async (req, res) => {
     try{
         const {name, email, password} = req.body;
-
         let user = await User.findOne({email});
 
         if(user){
